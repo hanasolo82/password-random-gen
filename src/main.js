@@ -21,3 +21,8 @@ function caracterMixer() {
     return code
   
 }
+
+function codeCopy() {
+
+   return alert('copy on clipboard')
+}
