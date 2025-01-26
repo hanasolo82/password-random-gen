@@ -10,19 +10,28 @@ let rightPasswordEl = document.getElementById('right-password-text')
 
 function caracterMixer() {
   let inputEl = document.getElementById('number-selector')
-  // modifying that html object
-  const inputValue = inputEl.value
+  let inputValue = inputEl.value
+  if(inputValue < 4) {
+    inputValue = 4
+  }
     let code = '';
     for(let i = 0; i < inputValue; i++) {
     const randomCaracter = Math.floor(Math.random() * caracters.length)
     code += caracters[randomCaracter]
-  } 
+  }
     leftPasswordEl.textContent = code
     return code
-  
+
 }
 
 function codeCopy() {
-
-   return alert('copy on clipboard')
-}
+  const CodeToCopy = leftPasswordEl.textContent
+  navigator.clipboard.writeText(CodeToCopy)
+  .then(() => {
+    alert('copy on clipboard')
+  })
+  .catch(err => {
+    console.error('Error al copiar al portapapeles:', err);
+  
+})
+} 
