@@ -23,14 +23,18 @@
     </div>
     <div class="length-input">
       <label for="number-selector">Code length</label>
-      <input id="number-selector" class="selector" type="number">
-    </div>
+      <input id="number-selector" class="selector" type="number" placeholder="4 - 15">
+    
       <button onclick="caracterMixer()" class="password-btn">Generate passwords</button>
+    </div>
+    <div class="box-results" onclick='codeCopy()'>
+      <div class="result-left">
+        <a id="left-password-text" class="left-password-text">12345ASDFasdf;.+</a>
+      </div>
+      <div class="result-right" onclick='codeCopy()'>
+        <a id="right-password-text" class="right-password-text">12345ASDFasdf;.+</a>
+      </div>
   </div>
-  <a onclick='codeCopy()' id="left-password-text" class="left-password-text">12345ASDFasdf;.+</a>
-
-  <button id="right-password-text" class="right-password-text">12345ASDFasdf;.+</button>
-
   <div id="app"></div>
   <script src="/src/main.js"></script>
 </body>

@@ -14,13 +14,19 @@ function caracterMixer() {
   if(inputValue < 4) {
     inputValue = 4
   }
-    let code = '';
+    let codeOne = '';
+    let codeTwo = '';
     for(let i = 0; i < inputValue; i++) {
-    const randomCaracter = Math.floor(Math.random() * caracters.length)
-    code += caracters[randomCaracter]
+    const randomCaracter = Math.floor(Math.random()  * caracters.length )
+    codeOne += caracters[randomCaracter]
+    }
+    for(let i = 0; i < inputValue; i++) {
+      const randomCaracter = Math.floor(Math.random()  * caracters.length )  
+    codeTwo += caracters[randomCaracter ]
   }
-    leftPasswordEl.textContent = code
-    return code
+    leftPasswordEl.textContent = codeOne
+    rightPasswordEl.textContent = codeTwo
+    return codeOne, codeTwo
 
 }
 
