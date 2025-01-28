@@ -4,20 +4,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link href="./src/style.css" type="text/css" rel="stylesheet">
   <title>Password Gen</title>
 </head>
 
 <body>
-  <div class="box-left">
-    <h1>Generate a</h1>
-    </br>
-    <h1>random password</h1>
-    </br>
-    <h2>Never use an insecure password again</h2>
-    <label for="number-selector">Code length</label>
-    <input id="number-selector" class="selector" type="number">
-    </br>
-    <button onclick="caracterMixer()" class="password-btn">Generate passwords</button>
+  <div class="container">
+    <div class="title">
+      <h1>Generate a</h1>
+      </br>
+      <h1>random</h1>
+      </br>
+      <h1>password</h1>
+      <h2>Never use an insecure password again</h2>
+    </div>
+    <div class="length-input">
+      <label for="number-selector">Code length</label>
+      <input id="number-selector" class="selector" type="number">
+    </div>
+      <button onclick="caracterMixer()" class="password-btn">Generate passwords</button>
   </div>
   <a onclick='codeCopy()' id="left-password-text" class="left-password-text">12345ASDFasdf;.+</a>
 
